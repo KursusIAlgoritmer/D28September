@@ -1,0 +1,58 @@
+//2.1.6
+//Which method runs faster for an array with all keys identical, selection sort or
+//insertion sort?
+//-----------------------------
+//Selection sort tjekker, for hvert nyt element der skal sorteres , resten af arrayet for at finde et element med  "mindre" værdi
+//ydre loop N gange
+//indre loop N , N-1 , N -2 ... 1 gange
+//-----------------------------
+//Insertion sort tjekker, for hvert nyt element der skal indsættes i den sorterede del af arrayet, om det er mindre end det største element i den
+//den sorterede del og kører altså kortest
+//ydre loop N gange
+//indre loop 1, 1, 1 ... 1 gange
+
+
+
+//2.1.7
+//Which method runs faster for an array in reverse order, selection sort or insertion sort?
+//-----------------------------
+//
+//Selection-sort
+//1.) Loop igennem alle tal i listen med tælleren "start_index"
+//  2.) For hver "start_index" loop igennem alle tal i "resten" af listen med tælleren "minimum_index"
+//    3.) Findes et element på "minimum_index"    <   element på "start_index"   ???
+//      4.) JA = Byt rundt på "minimum_index" og "start_index"
+//
+//1 inholdet kører altid N gange
+//2 indholdet Kører altid N + (N-1) + (N-2) + ... + 2 + 1 + 0 = N*(N-1)/2
+//4 bytter måske ?
+// dvs. uanset hvad der sker har vi en order of growth på N^2
+
+//Insertion-sort
+//1.) Loop igennem alle tal i listen med tæller "start_index"
+//  2.) Sammenlign "start_index" < "start_index -1"
+//    3.) JA = Loop fra "start_index-1" til "0" med tæller "insert_index"
+//      4.) Sammenlign plads "insert_index-1" < "start_index"
+//        5.) Ja = Insert "start_index" på "insert_index"
+//
+//1 indholdet kører altid N gange
+//2 da listen er omvendt trickes denne hver gang
+//3 indholdet kører helt til start hver gang pga. den omvendte orden N + (N-1) + (N-2) + ... + 2 + 1 + 0 = N*(N-1)/2
+// dvs. uanset hvad der sker har vi en order of growth på N^2
+
+
+
+//2.1.8
+//Suppose that we use insertion sort on a randomly ordered array where elements
+//have only one of three values. Is the running time linear, quadratic, or something in
+//between?
+//
+// sorteringsanalyse af "insertion sort" anvendt på tre forskellige værdier:
+//
+// omkostning højeste tal   : koster altid kun 1 at sortere
+// omkostning mellemste tal : koster altid "antal højeste sorterede tal" + 1
+// omkostning laveste tal   : koster altid "antal højeste sorterede tal" + "mellemst sorterede tal" + 1
+//
+// Lad os sige vi har:
+// N/x antal høje tal, N/y mellem tal og N/z små tal
+// Samlede beregningstid er da:  N/x + N/y*(N/x + 1) + N/z*(N/x + N/y + 1) ~ N^2
