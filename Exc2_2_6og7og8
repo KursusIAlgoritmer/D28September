@@ -54,5 +54,6 @@
 // omkostning laveste tal   : koster altid "antal højeste sorterede tal" + "mellemst sorterede tal" + 1
 //
 // Lad os sige vi har:
-// N/x antal høje tal, N/y mellem tal og N/z små tal
-// Samlede beregningstid er da:  N/x + N/y*(N/x + 1) + N/z*(N/x + N/y + 1) ~ N^2
+// x*N antal høje tal, y*N mellem tal og z*N små tal, hvor x + y + z = 1
+// Samlede beregningstid er da worst case:  x*N + y*N*(x*N + 1) + z*N*(x*N + y*N + 1) ~ (x*y*z)*N^2
+//
