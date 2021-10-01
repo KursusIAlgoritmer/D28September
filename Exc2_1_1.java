@@ -1,16 +1,23 @@
 public class Exc2_1_1{
-  //E-ASYQUESTION
-  //AE-SYQUESTION
-  //AES-YQUESTION
-  //AESY-QUESTION
-  //AEQSY-UESTION
-  //AEQSUY-ESTION
-  //AEEQSUY-STION
-  //AEEQSSUY-TION
-  //AEEQSSTUY-ION
-  //AEEIQSSTUY-ON
-  //AEEIOQSSTUY-N
-  //-AEEINOQSSTUY
+  //Show, in the style of the example trace with Algorithm 2.1, how selection sort
+  //sorts the array E A S Y Q U E S T I O N.
+
+  // i=0
+  // E - A S Y Q U E S T I O N
+  // i=1
+  // A E - S Y Q U E S T I O N
+  // i=2
+  // A E S - Y Q U E S T I O N
+  // i=3
+  // A E E - Y Q U S S T I O N
+  // i=4
+  // A E E N - Q U S S T I O Y
+
+
+// Inderste loop (N-1) + (N-2) + (N-3) + ... + 3 + 2 + 1 = N*N/2
+// ikke inputafhængig - laver samme arbejde hver gang
+
+
 
   public static void main(String[] args){
     char[] list = new char[args[0].length()];

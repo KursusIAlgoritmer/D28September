@@ -6,9 +6,10 @@ public class Exc2_2_2{
     String[] array = values.split("(?!^)");
     Comparable[] list = array;
 
+    for(Comparable s : list) System.out.print(s);System.out.println("");
+
     mergeSort(list);
 
-    for(Comparable s : list) System.out.print(s);System.out.println("");
   }
 
 
@@ -38,7 +39,8 @@ public class Exc2_2_2{
       else if (j > hi)              a[k] = aux[i++];
       else if (less(aux[j],aux[i])) a[k] = aux[j++];
       else                          a[k] = aux[i++];
-          for(Comparable s : a) System.out.print(s);System.out.println("");
+
+    for(Comparable s : a) System.out.print(s);System.out.println("");
   }
 
   public static boolean less(Comparable v, Comparable w){

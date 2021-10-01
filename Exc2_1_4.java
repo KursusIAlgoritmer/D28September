@@ -1,17 +1,41 @@
 public class Exc2_1_4{
-//  -EASYQUESTION
-//  A-ESYQUESTION
-//  AE-SYQUESTION
-//  AEE-YQUSSTION
-//  AEEI-QUSSTYON
-//  AEEIN-USSTYOQ
-//  AEEINO-SSTYUQ
-//  AEEINOQ-STYUS
-//  AEEINOQS-TYUS
-//  AEEINOQSS-YUT
-//  AEEINOQSST-UY
-//  AEEINOQSSTU-Y
-//  -AEEINOQSSTUY
+  //2.1.4 Show, in the style of the example trace with Algorithm 2.2, how insertion sort
+  //sorts the array E A S Y Q U E S T I O N
+
+//i=1, j=1
+//E - A S Y Q U E S T I O N
+//A E - S Y Q U E S T I O N
+//i=1, j=0
+//---------
+//i=2, j=2
+//A E - S Y Q U E S T I O N
+//---------
+//i=3, j=3
+//A E S - Y Q U E S T I O N
+//---------
+//i=4, j=4
+//A E S Y - Q  U E S T I O N
+//exchange
+//A E S Q - Y  U E S T I O N
+//i=4, j=3
+//A E S Q - Y  U E S T I O N
+//exchange
+//A E Q S - Y  U E S T I O N
+//i=4,j=2
+//---------
+//i=5, j=5
+//A E Q S Y - U E S T I O N
+
+
+
+
+
+
+
+
+
+
+
 
 
   public static void main(String[] args){

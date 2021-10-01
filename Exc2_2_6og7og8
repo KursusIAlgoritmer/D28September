@@ -4,12 +4,18 @@
 //-----------------------------
 //Selection sort tjekker, for hvert nyt element der skal sorteres , resten af arrayet for at finde et element med  "mindre" værdi
 //ydre loop N gange
-//indre loop N , N-1 , N -2 ... 1 gange
-//-----------------------------
+//indre loop N-1 , N -2 ... 1 gange
+//T(N) = N + (N-1) + (N-2) + ...+ 2 + 1 = N*(N+1)/2 = O(N^2)
+//T(N) = N*(N+1)/2 ~ N^2/2
+//O(N^2)
+
+// 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1  = 9 + (8+1) + (7+2) + (6+3) + (5+4) = 9*(9+1)/2 = N*(N+1)/2
+ //-----------------------------
 //Insertion sort tjekker, for hvert nyt element der skal indsættes i den sorterede del af arrayet, om det er mindre end det største element i den
 //den sorterede del og kører altså kortest
 //ydre loop N gange
 //indre loop 1, 1, 1 ... 1 gange
+//T(N) = 1 + 1 + ... + 1 = N-1
 
 
 
@@ -24,7 +30,7 @@
 //      4.) JA = Byt rundt på "minimum_index" og "start_index"
 //
 //1 inholdet kører altid N gange
-//2 indholdet Kører altid N + (N-1) + (N-2) + ... + 2 + 1 + 0 = N*(N-1)/2
+//2 indholdet Kører altid N + (N-1) + (N-2) + ... + 2 + 1 + 0 = N*(N+1)/2
 //4 bytter måske ?
 // dvs. uanset hvad der sker har vi en order of growth på N^2
 
@@ -57,3 +63,5 @@
 // x*N antal høje tal, y*N mellem tal og z*N små tal, hvor x + y + z = 1
 // Samlede beregningstid er da worst case:  x*N + y*N*(x*N + 1) + z*N*(x*N + y*N + 1) ~ (x*y*z)*N^2
 //
+//
+// Kan man finde på et input der har O(N^2) invertioner
